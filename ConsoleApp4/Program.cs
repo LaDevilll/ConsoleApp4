@@ -22,7 +22,6 @@ namespace ConsoleApp4
         static void M1()
         {
             int a;
-            int b;
             Console.WriteLine("Введите количество рублей");
             string tmp = Console.ReadLine();
             a = int.Parse(tmp);
@@ -36,7 +35,7 @@ namespace ConsoleApp4
                     {
                     Console.WriteLine($"{a} рубль");
                 }
-                else if ((a % 10 == 2 && a % 10 == 3 && a % 10 == 4) && (a % 100 < 10 || a % 100 >= 20))
+                else if ((a % 10 >= 2 && a % 10 <= 4) && (a % 100 < 10 || a % 100 >= 20))
                 {
                     Console.WriteLine($"{a} рубля");
                 }
@@ -51,7 +50,6 @@ namespace ConsoleApp4
         static void M2()
         {
             int a;
-            int b;
             Console.WriteLine("Введите трехзначное число");
             string tmp = Console.ReadLine();
             a = int.Parse(tmp);
@@ -61,7 +59,7 @@ namespace ConsoleApp4
             }
             else
             {
-                int ff = (a / 100) % 10;
+                int ff = a / 100;
                 int gg = a % 10;
                 //Console.WriteLine($"{ff} {gg}");
                 if (ff == gg)
@@ -153,14 +151,14 @@ namespace ConsoleApp4
         {
             int a;
             int c = 1;
-            Console.WriteLine("Введите  целое число A");
+            Console.WriteLine("Введите  целое число: ");
             string tmp = Console.ReadLine();
             a = int.Parse(tmp);
             for (int i = 1; i <= a; i++)
             {
                 c *= i;
             }
-            Console.WriteLine($"Сумма всех целых чисел от {a} до  включительно: {c}");
+            Console.WriteLine($"Произведение всех целых чисел от {a} до  включительно: {c}");
         }
 
     
@@ -179,172 +177,6 @@ namespace ConsoleApp4
 
 
 
-
-
-
-
-
-
-        static void If10()
-        {
-            int a;
-            int b;
-            Console.WriteLine("введите значение а ");
-            string q = Console.ReadLine();
-            a = int.Parse(q);
-            Console.WriteLine("введите значение в ");
-            string w = Console.ReadLine();
-            b = int.Parse(w);
-            if (a != b) {
-                a = a + b;
-                b = a;
-            } else {
-                a = 0;
-                b = 0;
-            }
-            Console.WriteLine("a = " + a + " b = " + b);
-        }
-        static void Begin5()
-        {
-
-            int a;
-
-            string tmp = Console.ReadLine();
-            a = int.Parse(tmp);
-            if (a > 0) {
-                a = a + 1;
-                Console.WriteLine($"Число a {a} положительное");
-            } else if (a == 0) {
-                Console.WriteLine("a равно нулю");
-            } else { //все остальные случаи
-                Console.WriteLine("a отрицательное");
-            }
-        }
-
-        static void If11()
-        {
-            Console.WriteLine("If11");
-            int a;
-            int b;
-            int c;
-            Console.WriteLine("введите значение а ");
-            string q = Console.ReadLine();
-            a = int.Parse(q);
-            Console.WriteLine("введите значение в ");
-            q = Console.ReadLine();
-            b = int.Parse(q);
-            Console.WriteLine("введите значение c ");
-            q = Console.ReadLine();
-            c = int.Parse(q);
-            if (a < b && a < c) {
-                Console.WriteLine("a наименьшее");
-            } else if (b < c && b < a) {
-                Console.WriteLine("b наименьшее");
-            } else if (c < a && c < b) {
-                Console.WriteLine("c наименьшее");
-            } else {
-                Console.WriteLine("числа равны");
-            }
-        }
-        static void If14()
-        {
-            double a;   
-            double b;
-            double c;
-            Console.WriteLine("введите значение а ");
-            string q = Console.ReadLine();
-            a = int.Parse(q);
-            Console.WriteLine("введите значение в ");
-            q = Console.ReadLine();
-            b = int.Parse(q);
-            Console.WriteLine("введите значение c ");
-            q = Console.ReadLine();
-            c = int.Parse(q);
-            if (a > b && a > c) 
-            {
-                if (b > c ) {
-                    Console.WriteLine($"Наименьшее число: {c}");
-                }
-                else {
-                    Console.WriteLine($"Наименьшее число: {b}");
-                }
-                Console.WriteLine($"Наибольшее число: {a}");
-            }
-            else if (b > c && b > a) {
-                if (a > c) {
-                    Console.WriteLine($"Наименьшее число: {c}");
-                } else {
-                    Console.WriteLine($"Наименьшее число: {a}");
-                }
-                Console.WriteLine($"Наибольшее число: {b}");
-            }
-            else if (c > a && c > b) 
-            {
-                if (a > b) {
-                    Console.WriteLine($"Наименьшее число: {b}");
-                } else {
-                    Console.WriteLine($"Наименьшее число: {a}");
-                }
-                Console.WriteLine($"Наибольшее число: {c}");
-            }
-        }
-
-        static void For1()
-        {
-            Console.WriteLine("for1");
-            int n;
-            int k;
-            Console.WriteLine("введите значение N ");
-            string q = Console.ReadLine();
-            n = int.Parse(q);
-            Console.WriteLine("введите значение K ");
-            q = Console.ReadLine();
-            k = int.Parse(q);
-            //N = 3
-            //K = 5
-            //5 5 5
-            Console.WriteLine("------------------------");
-            for( int i = 0; i < n ; i = i + 1) {
-                Console.WriteLine(k);
-            }
-
-        }
-        static void For4()
-        {
-            int a;
-            Console.WriteLine("введите цену за кг ");
-            string b = Console.ReadLine();
-            a = int.Parse(b);
-
-            for (int i = 1; i <= 10; i = i + 1) 
-            {
-                Console.WriteLine("Цена за " + i + " кг " + i * a);
-            }
-        }
-
-
-            static void For2()
-        {
-            Console.WriteLine("for2");
-            int a;
-            int b;
-            Console.WriteLine("введите значение а ");
-            string q = Console.ReadLine();
-            a = int.Parse(q);
-            Console.WriteLine("введите значение в ");
-            q = Console.ReadLine();
-            b = int.Parse(q);
-            //for( задание начальных значений ; условие продолжения цикла   ;  действие, выполняемое после цикла  )
-            //a = 5;
-            //b = 10;
-            //должно вывести: 5, 6, 7, .. 10
-            int cnt =0;
-            for( int i = a; i <= b; i = i + 1) {
-                Console.WriteLine(i);
-                cnt++;
-            }
-            Console.WriteLine($"cnt = {cnt}");
-        }
 
         static void Main(string[] args)
         {
