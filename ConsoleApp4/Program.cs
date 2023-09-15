@@ -149,11 +149,11 @@ namespace ConsoleApp4
 
         static void M9()
         {
-            int a;
-            int c = 1;
+            long a;
+            long c = 1;
             Console.WriteLine("Введите  целое число: ");
             string tmp = Console.ReadLine();
-            a = int.Parse(tmp);
+            a = long.Parse(tmp);
             for (int i = 1; i <= a; i++)
             {
                 c *= i;
@@ -180,7 +180,7 @@ namespace ConsoleApp4
 
         static void Main(string[] args)
         {
-            M1();
+            M9();
         }
     }
 }
