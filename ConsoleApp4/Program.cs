@@ -28,21 +28,20 @@ namespace ConsoleApp4
             a = int.Parse(tmp);
             if (a < 0)
             {
-                Console.WriteLine("Введите положмтельное число");
+                Console.WriteLine("Денежная валюта не может быть отрицательной (пока что)");
             }
             else
-            {
-                b = a % 10;
-                if (b == 1)
-                {
+            {              
+                if (a % 10 == 1 && a % 100 != 11)
+                    {
                     Console.WriteLine($"{a} рубль");
                 }
-                else if (b == 0 || b == 5 || b == 6 || b == 7 || b == 8 || b == 9)
+                else if ((a % 10 == 2 && a % 10 == 3 && a % 10 == 4) && (a % 100 < 10 || a % 100 >= 20))
                 {
-                    Console.WriteLine($"{a} рублей");
+                    Console.WriteLine($"{a} рубля");
                 }
                 else {
-                    Console.WriteLine($"{a} рубля");
+                    Console.WriteLine($"{a} рублей");
                 }
             }
         }
@@ -349,7 +348,7 @@ namespace ConsoleApp4
 
         static void Main(string[] args)
         {
-            M9();
+            M1();
         }
     }
 }
