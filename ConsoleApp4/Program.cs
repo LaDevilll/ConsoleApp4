@@ -149,12 +149,12 @@ namespace ConsoleApp4
 
         static void M9()
         {
-            long a;
-            long c = 1;
+            ulong a;
+            ulong c = 1;
             Console.WriteLine("Введите  целое число: ");
             string tmp = Console.ReadLine();
-            a = long.Parse(tmp);
-            for (int i = 1; i <= a; i++)
+            a = ulong.Parse(tmp);
+            for (ulong i = 1; i <= a; i++)
             {
                 c *= i;
             }
